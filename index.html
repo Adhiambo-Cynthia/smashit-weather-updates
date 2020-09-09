@@ -9,20 +9,20 @@
     <title>Smash it weather</title>
     <link href="app.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="manifest" href="app.webmanifest">
+    <!-- <link rel="manifest" href="app.webmanifest"> -->
 </head>
 <body>
     <div class="container">
         <h2>SMASH IT WEATHER UPDATES</h2>
         <p>Kindly enter your location (preferably a town or city near you)</p>
         
-            <div class="form-group">
+            <form id="location_form" class="form-group">
                 <label for="city">City</label>
                 <input id="city" placeholder="Nairobi">
                 <label for="country">Country</label>
                 <input id="country" placeholder="ke">
-            </div>
-            <button type="submit" class="btn btn-light">Submit</button>
+            </form>
+            <button id="submit" type="submit" class="btn btn-light">Submit</button>
        
         <h4>Your forecast for today</h4>
         <p><img class="icon"></p>
@@ -33,7 +33,7 @@
     </div>
     <script src="app.js"></script>
     <!-- register service worker -->
-    <script>
+    <!-- <script>
         if ('serviceWorker' in navigator) 
             {
               window.addEventListener('load', () => {
@@ -41,6 +41,6 @@
               .then(() => { console.log("[ PWA Fire Bundle ] Service Worker Registered"); });
             } ); 
           }  
-        </script>
+        </script> -->
     </body>
     </html>
