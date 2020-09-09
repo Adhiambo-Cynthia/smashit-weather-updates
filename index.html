@@ -1,46 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- theme-color -->
     <meta name="theme-color" content="#fff" />
     <!-- end-theme-color -->
     <title>Smash it weather</title>
-    <link href="app.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="manifest" href="app.webmanifest">
-</head>
-<body>
-    <div class="container">
-        <h2>SMASH IT WEATHER UPDATES</h2>
-        <p>Kindly enter your location (preferably a town or city near you)</p>
-        
-            <div class="form-group">
-                <label for="city">City</label>
-                <input id="city" placeholder="Nairobi">
-                <label for="country">Country</label>
-                <input id="country" placeholder="ke">
-            </div>
-            <button type="submit" class="btn btn-light">Submit</button>
-       
-        <h4>Your forecast for today</h4>
-        <p><img class="icon"></p>
-        <p class="forecast"></p>
-        <h4>Temperatures</h4>
-        <p class="temp"><p>
+    <link href="app.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="manifest" href="app.webmanifest" />
+  </head>
+  <body>
+    <div class="container-custom">
+    
+      <h2>SMASH IT WEATHER UPDATES</h2>
+      <p>Kindly enter your location (preferably a town or city near you)</p>
 
+      <div class="form-group">
+        <div class="row justify-content-md-center">
+          <div class="input-group mb-3 col-md-6 row center-me">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="addon-wrapping">CITY</span>
+            </div>
+            <input
+              type="text"
+              id="city"
+              class="form-control"
+              placeholder="Nairobi"
+              aria-label="Username"
+              aria-describedby="addon-wrapping"
+            />
+          </div>
+        </div>
+        <div class=" row justify-content-md-center">
+          <div class="input-group mb-3 col-md-6 col-md-offset-5">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="addon-wrapping">COUNTRY</span>
+            </div>
+            <input
+              type="text"
+              id="country"
+              class="form-control"
+              placeholder="ke"
+              aria-label="Username"
+              aria-describedby="addon-wrapping"
+            />
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+
+      <h4>Your forecast for today</h4>
+      <p><img class="icon" /></p>
+      <p class="forecast"></p>
+      <h4>Temperatures</h4>
+      <p class="temp"></p>
+      <p></p>
     </div>
+
     <script src="app.js"></script>
+    <!-- Bootstrap js -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
     <!-- register service worker -->
     <script>
-        if ('serviceWorker' in navigator) 
-            {
-              window.addEventListener('load', () => {
-              navigator.serviceWorker.register('./service-worker.js')
-              .then(() => { console.log("[ PWA Fire Bundle ] Service Worker Registered"); });
-            } ); 
-          }  
-        </script>
-    </body>
-    </html>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./service-worker.js").then(() => {
+            console.log("[ PWA Fire Bundle ] Service Worker Registered");
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
