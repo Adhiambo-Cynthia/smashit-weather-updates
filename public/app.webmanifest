@@ -10,12 +10,12 @@
     "icons": [
     {
       "src": "images/icons.jpg",
-      "sizes": "72x71",
+      "sizes": "71x71",
       "type": "image/jpg"
     },
     {
       "src": "images/icon2.jpg",
-      "sizes": "495x436",
+      "sizes": "323x323",
       "type": "image/jpg"
     }
     ],

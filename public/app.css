@@ -1,0 +1,22 @@
+.container-custom {
+  height: 100vh;
+  overflow: hidden;
+  margin: auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/bg.JPG");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding: 10px;
+  color: white;
+  box-shadow: 2px 2px 2px 2px #e0e0e0;
+  text-align: center;
+  width: 100vw;
+}
+
+.center-me {
+  margin:0 auto;
+  float:none;
+ 
+}
