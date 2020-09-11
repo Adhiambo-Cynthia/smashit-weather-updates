@@ -15,6 +15,7 @@ function getData(city, country){
         let forecast_feed=data.weather[0].description
         localStorage.setItem("forecast_feed",forecast_feed)
         let icon_feed= `https://api.openweathermap.org/img/w/${data.weather[0].icon}.png`
+        localStorage.setItem("icon_feed",icon_feed)
         icon.src=icon_feed
         forecast.innerHTML=forecast_feed
         temp.innerHTML=`${temp_feed} °F`
@@ -26,11 +27,13 @@ function populateUI(){
     const savedCity=localStorage.getItem('city')
     const savedTemp=localStorage.getItem('temp_feed')
     const savedForecast=localStorage.getItem('forecast_feed')
-   if(savedCity !==null && savedCountry !==null && savedForecast !==null && savedTemp !==null){
+    const savedIcon=localStorage.getItem('icon_feed')
+   if(savedCity !==null && savedCountry !==null && savedForecast !==null && savedTemp !==null && savedIcon !==null){
         country.value=savedCountry
         city.value=savedCity
         forecast.innerHTML=savedForecast
         temp.innerHTML=savedTemp
+        icon.src=savedIcon
    }
   
 }
