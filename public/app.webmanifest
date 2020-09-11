@@ -9,14 +9,14 @@
     "lang": "en-US",
     "icons": [
     {
-      "src": "images/icons.jpg",
+      "src": "images/icons.png",
       "sizes": "71x71",
       "type": "image/jpg"
     },
     {
-      "src": "images/icon2.jpg",
+      "src": "images/icon2.png",
       "sizes": "323x323",
-      "type": "image/jpg"
+      "type": "image/png"
     }
     ],
     "start_url": "index.html?launcher=true"
